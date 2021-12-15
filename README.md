@@ -39,7 +39,7 @@ python manage.py runserver
 https://simplehotelreservation.herokuapp.com/
 > Sentiment-classification demo app is not working on web right now . 
 > I think because of the nltk.txt download. When I deploy it, I didn't run ntlk.downloader() or directory of the Review_model.pkl on heroku 
-> Google third party login is working only on @neu.edu.ph 
+
 **Admin Account: 
 username: admin@admin.com
 password: admin**
