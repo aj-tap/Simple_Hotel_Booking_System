@@ -10,7 +10,7 @@ Note: > It's one of my college requirements. I may or may not update it as I foc
 Guide for local deployment 
 ```
 python3 -m venv env
-source env/bin/activate            ##in Windows active /env/bin/activate
+source env/bin/activate            ##in Windows activate /env/bin/activate
 pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
