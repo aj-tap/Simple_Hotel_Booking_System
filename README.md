@@ -1,6 +1,6 @@
 # Simple_Hotel_Booking_System
 
-Note: > It's one of my college requirements. I may or may not update it as I focus on other things.
+Note: > It's one of my college requirements. I may or may not update it as I focus on learning other things.
 
 ## How to install and run
 1. Install Python 3.6+ from the official website.
