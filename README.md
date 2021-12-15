@@ -5,17 +5,16 @@ Note: > It's one of my college requirements. I may or may not update it as I foc
 ## How to install and run
 1. Install Python 3.6+ from the official website.
 2. Make a make a virtual enviroment and Install dependencies 
-3. Make migrations and runserver, you can access it localy using browser http://127.0.0.1:8000/
+3. Make migrations and runserver, you can access it using browser http://127.0.0.1:8000/
 
 Guide for local deployment 
 ```
 python3 -m venv env
-source env/bin/activate  
+source env/bin/activate            ##in Windows active /env/bin/activate
 pip install -r requirements.txt
 python manage.py makemigrations
 python manage.py migrate
 python manage.py runserver
-
 ```
 ## Features
 * Booking Module 
