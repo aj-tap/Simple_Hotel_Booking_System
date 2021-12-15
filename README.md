@@ -41,6 +41,7 @@ https://simplehotelreservation.herokuapp.com/
 > I think because of the nltk.txt download. When I deploy it, I didn't run ntlk.downloader() or directory of the Review_model.pkl on heroku 
 
 **Admin Account: 
+https://simplehotelreservation.herokuapp.com/admin
 username: admin@admin.com
 password: admin**
 
