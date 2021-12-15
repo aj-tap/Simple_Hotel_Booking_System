@@ -31,7 +31,7 @@ python manage.py runserver
 ### Home Page
 ![definite](https://i.ibb.co/3pNFFPq/Screenshot-2021-12-15-07-10-37.png)
 
-### The model Classifies postive or negative. It will shows in Staff Page 
+### The model Classifies whether the text is postive or negative. It will shows in Staff Page 
 ![input](https://i.ibb.co/ZckbCPV/Screenshot-2021-12-15-07-15-15.png)
 ![Result](https://i.ibb.co/tKJFbWh/Screenshot-2021-12-15-07-21-03.png)
 
