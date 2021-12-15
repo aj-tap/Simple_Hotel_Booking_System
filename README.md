@@ -4,8 +4,9 @@ Note: > It's one of my college requirements. I may or may not update it as I foc
 
 ## How to install and run
 1. Install Python 3.6+ from the official website.
-2. Make a make a virtual enviroment and Install dependencies 
-3. Make migrations and runserver, you can access it using browser http://127.0.0.1:8000/
+2. Git clone the repository or download the zip and unzip it. 
+3. Make a make a virtual enviroment and Install dependencies 
+4. Make migrations and runserver, you can access it using browser http://127.0.0.1:8000/
 
 Guide for local deployment 
 ```
@@ -38,5 +39,7 @@ python manage.py runserver
 https://simplehotelreservation.herokuapp.com/
 > Sentiment-classification demo app is not working on web right now . 
 > I think because of the nltk.txt download. When I deploy it, I didn't run ntlk.downloader() or directory of the Review_model.pkl on heroku 
-
+**Admin Account: 
+username: admin@admin.com
+password: admin**
 
