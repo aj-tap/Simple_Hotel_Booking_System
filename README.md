@@ -18,8 +18,8 @@ python manage.py runserver
 
 ```
 ## Features
-* Payment Module 
 * Booking Module 
+* Payment Module 
 * Contact Email Module. (Check django docs for setting up email api)
 * Google maps api and Google account when creating an account. Insert API in (settings.py)
 * Guest Ratings Sentiment-Classification (It classify ratings of guest whether it is postive or negative feedback with 89% accuracy level.)
