@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<body>
+    <section class="contact-clean">
+        <form method="post" style="background: rgb(30,40,51);">
+            {% csrf_token %}
+            <h2 class="text-center" style="color: rgb(255,255,255);">Contact us</h2>
+            <p class="text-center" style="color: rgb(255,255,255);margin-top: -25px;margin-bottom: 23px;">Do you have anything in your mind to tell us? Please don&#39;t hesitate to get in touch to us via our contact form.</p>
+            <div class="mb-3"><input class="form-control" type="text" name="{{ form.contact_name.name }}" placeholder="Name" /></div>
+            <div class="mb-3"><input class="form-control is-invalid" type="email" name="{{ form.contact_email.name }}" placeholder="Email" /></div>
+            <div class="mb-3"><textarea class="form-control" name="{{ form.content.name}}" placeholder="Message" rows="14"></textarea></div>
+            
+            <div class="mb-3">    <input type="submit" value="Submit"></div>
+
+        </form>
+    </section>
+</body>
+
+{% endblock %}   

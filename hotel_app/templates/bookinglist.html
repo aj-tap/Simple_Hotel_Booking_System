@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+{% include "navbar.html" %}
+
+<body>
+
+    <section>
+        <div>
+            <h1 class="display-5 text-center" style="padding-top: 20px;">My reservations&nbsp;</h1>
+        </div>
+        <div>
+            <ul class="list-group text-start" style="padding: 80px;padding-top: 0px;">
+
+                {% for object in object_list %}
+                <li class="list-group-item" style="border-width: 10px;border-style: inset;">
+                    <div class="table-responsive">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Booking No. </th>
+                                    <th>{{ object.booking_num }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Hotel</td>
+                                    <td>{{ object.hotel_code }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>{{ object.guest_ID.first_name }} {{ object.guest_ID.last_name }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Room name</td>
+                                    <td>{{ object.room_ID }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Check in</td>
+                                    <td>{{ object.checkin_date }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Check out</td>
+                                    <td> {{ object.checkout_date }}</td>
+                                </tr>
+                                <td><a class="btn btn-primary btn-lg btn-default" role="button" href="{% url 'review' %}"><i class="fa fa-sign-out fa-fw"></i><span class="network-name">  Checkout</span></a></td>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </li>
+                {% empty %}
+                No Reservations yet. 
+                {% endfor %}
+               
+
+
+
+
+
+            </ul>
+        </div>
+    </section>
+    <script src=" {% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'assets/js/bs-init.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src=" {% static 'assets/js/grayscale.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src=" {% static 'assets/js/Simple-Slider.js' %} "></script>
+</body>
+
+
+{% endblock %}   

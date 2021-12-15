@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    
+<nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+    <div class="container"><a class="navbar-brand" href="{%url 'home' %}"><i class="fas fa-hotel" style="margin: 13px;"></i>BetterSogo</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ms-auto">
+               
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<body>
+    <section class="login-dark">
+        <form method="POST" style="background: rgb(30,40,51);">
+            {% csrf_token %}
+            <h2 class="visually-hidden">Login Form</h2>
+            <div class="illustration"><i class="fas fa-hotel" style="color: rgb(255,255,255);"></i></div>
+            <div class="mb-3"><input class="form-control" type="text" placeholder="Email" name="email"></div>
+            <div class="mb-3"><input class="form-control" type="password" name="password" placeholder="Password" name="password"></div>
+            <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="color: rgb(255,244,244);margin-top: 17px;">Log In</button>
+                <a class="btn btn-primary d-block w-100" role="button" href="{% url 'google_login'%}" style="color: rgb(255,244,244);margin-top: 17px;"><i class="fa fa-google"></i> Login with Google </a>
+                <a class="btn btn-primary d-block w-100" role="button" href="{% url 'register' %}" style="color: rgb(255,244,244);margin-top: 17px;">SIGN up</a>
+            </div><a class="forgot" href="#">Forgot your username or password?</a>
+        </form>
+    </section>
+    <script src=" {% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'assets/js/bs-init.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src=" {% static 'assets/js/grayscale.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src=" {% static 'assets/js/Simple-Slider.js' %} "></script>
+</body>
+
+
+
+{% endblock %}   
+
+
+

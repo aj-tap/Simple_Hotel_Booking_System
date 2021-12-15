@@ -1,0 +1,55 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<body>
+    <nav class="navbar navbar-light navbar-expand-md fixed-top" id="mainNav">
+        <div class="container"><a class="navbar-brand" href="{%url 'home' %}"><i class="fas fa-hotel" style="margin: 13px;"></i>BetterSogo</a><button data-bs-toggle="collapse" class="navbar-toggler navbar-toggler-right" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto">
+                   
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="register-photo" style="background: rgb(0,0,0);height: 1000px;background: #475d62 url( {% static 'assets/img/star-sky.jpg' %} );background-size: cover;position: relative;">
+        <div class="form-container" style="width: 445.006px;">
+            {{ form.non_field_errors }}
+
+            {{ form.source.errors }}
+            {{ form.source }}          
+            <form method="POST" style="background: rgb(30,40,51);">
+                {% csrf_token %}
+                <h2 class="text-center" style="color: rgb(255,255,255);"><strong>Create</strong> an account.</h2>
+                
+                
+                {% for field in form %}
+      
+                <div class="container" style="color: rgb(255,255,255);">
+                    <div class="row">
+                        <div class="col-md-12"><label class="col-form-label"><small>{{field.label}}</small></label></div>
+                    </div>
+                    <div class="row">
+                        {{field}}
+                    </div>
+                </div>
+
+                {% endfor %}
+                <br>
+             
+                <div class="mb-3">    <input type="submit" value="Submit"></div>
+
+            </form>
+        </div>
+    </section>
+    <script src=" {% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'assets/js/bs-init.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src=" {% static 'assets/js/grayscale.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src=" {% static 'assets/js/Simple-Slider.js' %} "></script>
+</body>
+
+{% endblock %}   

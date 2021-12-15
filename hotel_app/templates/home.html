@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<body id="page-top" data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="77">
+
+    {% include "navbar-home.html" %}
+
+    <header data-bss-disabled-mobile="true" data-aos="fade" data-aos-duration="950" data-aos-delay="300" data-aos-once="true" class="masthead" style="background: linear-gradient(rgba(0,0,0,0.14) 28%, rgba(67,62,62,0.8) 80%, rgba(0,0,0,0.65) 91%, rgba(0,0,0,0.76) 98%), url( {% static 'assets/img/beach-blur.gif' %} ) no-repeat;background-size: auto, cover;">
+        <div class="intro-body">
+            <div class="container" style="border-style: none;">
+                <div class="row">
+                    <div class="col-lg-8 col-xl-7 offset-0 mx-auto"><i class="fas fa-baby" data-aos="fade" data-aos-delay="950" style="font-size: 69px;color: #ffffff;height: 89.8473px;margin: 10px;"></i>
+                        <h1 data-aos="zoom-out" data-aos-duration="550" data-aos-delay="100" class="brand-heading" style="font-size: 50px;font-family: Cinzel, serif;text-align: center;font-style: italic;color: #f4ed7c;padding: 0px;margin: -20px;margin-bottom: 5px;margin-top: -20px;">Where magic happens</h1>
+                        <p class="intro-text" style="font-family: Cabin, sans-serif;color: #ffffff;">SINCE 1969</p><a class="btn btn-link btn-circle" role="button" data-bss-hover-animate="pulse" href="#Amenities" style="margin: -12px 0px 0px;margin-bottom: 10px;"><i class="fa fa-angle-double-down animated"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section id="Amenities" class="features-clean" style="background: rgb(0,0,0);">
+        <div class="container" style="background: #000000;padding: 43px;">
+            <div class="intro">
+                <h3 class="text-center" style="color: rgb(255,255,255);margin: 18px;padding: 20px;height: 11.927px;">WELCOME TO</h3>
+                <h1 class="display-3 text-center" style="color: #f4ed7c;text-align: center;height: 74.8318px;">BETTER SOGO</h1>
+                <p class="text-center" style="color: var(--bs-body-bg);text-align: center;margin: -29px;">Abot langit ang tuwa pag nasa better sogo ka.&nbsp;</p>
+            </div>
+            <div class="row features" data-bss-disabled-mobile="true" data-aos="fade-up">
+                <div class="col-sm-6 col-lg-4 item"><i class="fas fa-spa pulse animated infinite icon" data-bss-disabled-mobile="true" style="color: rgb(255,255,255);"></i>
+                    <h3 class="name" style="color: var(--bs-gray-100);">Therapeutic Massage</h3>
+                    <p class="description">After a day of discovering the beauty<br>of City, treat yourself to a calming session at our wellness hub.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fas fa-home pulse animated infinite icon" data-bss-disabled-mobile="true" style="color: rgb(255,255,255);"></i>
+                    <h3 class="name" style="color: var(--bs-gray-100);"><strong>In-Room Amenities</strong></h3>
+                    <p class="description">We've pulled out all the stops. In your hotel room, we've included a fridge, <br>HD TV, WiFi, hairdryer, iron and even hypoallergenic bedding.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fas fa-lock pulse animated infinite icon" data-bss-disabled-mobile="true" style="color: rgb(255,255,255);"></i>
+                    <h3 class="name" style="color: var(--bs-gray-100);">Safety Deposit Box</h3>
+                    <p class="description">Leaving your valuables while you go off and enjoy the sights and wonders of City should never be a problem.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fas fa-parking pulse animated infinite icon" data-bss-disabled-mobile="true" style="color: rgb(255,255,255);"></i>
+                    <h3 class="name" style="color: var(--bs-gray-100);">Parking Space</h3>
+                    <p class="description">Leaving your valuables while you go off and enjoy the sights and wonders</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="fas fa-wifi pulse animated infinite icon" data-bss-disabled-mobile="true" style="color: rgb(255,255,255);"></i>
+                    <h3 class="name" style="color: var(--bs-gray-100);"><strong>Free internet access</strong></h3>
+                    <p class="description">Remember the days of hotel WiFi that cost $20 per day? We offer free and fast internet access.</p>
+                </div>
+                <div class="col-sm-6 col-lg-4 item"><i class="material-icons pulse animated infinite icon" data-bss-disabled-mobile="true" style="color: rgb(255,255,255);">local_dining</i>
+                    <h3 class="name" style="color: var(--bs-gray-100);">Free breakfast</h3>
+                    <p class="description">Who wants to wander around a strange city looking for something to eat early in the morning?</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="rooms" class="content-section">
+        <div style="margin-top: -121px;">
+            <p style="text-align: center;font-size: 22px;font-family: Cinzel, serif;margin-bottom: -5px;">Stay with us&nbsp;</p>
+            <h1 class="display-5" style="text-align: center;margin-bottom: -30px;font-family: Lora, serif;font-weight: bold;">Rooms &amp; Suites<br></h1>
+        </div>
+        <div class="card-group" style="border: 52.99336px solid rgb(0,0,0);">
+            <div class="card"><img class="card-img-top w-100 d-block" src=" {% static 'assets/img/rm-st.jpg' %} ">
+                <div class="card-body" style="color: rgb(0,0,0);background: #725e26;">
+                    <h4 class="card-title" style="color: #f4ed7c;">Studio Room</h4>
+                    <p class="card-text" style="color: rgb(255,255,255);">Designed with simplicity, our 20sqm Studio room is ideal for travelers <br>who are looking for a budget-friendly yet comfortable accommodation</p>
+                </div>
+            </div>
+            <div class="card"><img class="card-img-top w-100 d-block" src=" {% static 'assets/img/rm-standard.jpg' %} ">
+                <div class="card-body" style="background: #725e26;">
+                    <h4 class="card-title" style="color: #f4ed7c;">Standard Room</h4>
+                    <p class="card-text">Designed for couples who are looking for relaxing accommodation. This 24sqm room comes with a double sized bed and appointed with the exact blend of amenities to give you comfort for the night.</p>
+                </div>
+            </div>
+            <div class="card"><img class="card-img-top w-100 d-block" src=" {% static 'assets/img/rm-fm.jpg' %} ">
+                <div class="card-body" style="background: #725e26;">
+                    <h4 class="card-title" style="color: #f4ed7c;">Family RooM</h4>
+                    <p class="card-text">Enjoy a well-planned staycation with this 36sqm room that is fit for <br>family and group of friends who are looking for a spacious room to move around.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="text-center content-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Contact us</h2>
+                    <p>Need a reservation? Get in touch with our team. We will be happy to assist you with your query. We are also active in social media. You can find us on below address. For inquiry call <strong>8700-999 </strong></p>
+                    <ul class="list-inline banner-social-buttons">
+                        <li class="list-inline-item"><a class="btn btn-primary btn-lg btn-default" role="button" href="{% url 'contact' %}"><i class="fa fa-envelope fa-fw"></i><span class="network-name">  EMAIL</span></a></li>
+                        <li class="list-inline-item"><a class="btn btn-primary btn-lg btn-default" role="button" href="#"><i class="fa fa-twitter fa-fw"></i><span class="network-name" style="font-size: 18px;"> Twitter</span></a></li>
+                        <li class="list-inline-item"><a class="btn btn-primary btn-lg btn-default" role="button" href="#"><i class="fa fa-facebook-f fa-fw"></i><span class="network-name" style="font-size: 18px;">FaceBook</span></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="map-clean"><iframe allowfullscreen frameborder="0" src="https://www.google.com/maps/embed/v1/directions?key=AIzaSyBtAM8NVaKdj4K2wO8dZio6Qo7-8RMh-PM&amp;origin=New+Era%2C+Quezon+City%2C+Metro+Manila%2C+Philippines&amp;destination=2143+Singalong+Street%2C+Malate%2C+Manila%2C+1004+Metro+Manila%2C+Philippines&amp;zoom=15" width="100%" height="450"></iframe></div>
+    <footer>
+        <div class="container text-center">
+            <p>Copyright ©&nbsp;BetterSogo 2021</p>
+        </div>
+    </footer>
+    <script src=" {% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'assets/js/bs-init.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src=" {% static 'assets/js/grayscale.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src=" {% static 'assets/js/Simple-Slider.js' %} "></script>
+</body>
+
+
+
+{% endblock %}   

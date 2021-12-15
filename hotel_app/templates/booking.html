@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<body>
+    {% include "navbar.html" %}
+
+    <section class="register-photo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <div>
+                        <h3 style="margin-top: 10px;">Rooms available</h3>                        
+                        <ul class="list-group">           
+                            {% for room in rooms %} 
+                            <li class="list-group-item">
+                               
+                                <img class style="height:100px;" src="{{room.room_img.url }}" />
+                                
+                                <span class="text-dark" style="margin-right: 15px;margin-left: 25px;">
+                                    <i class="fas fa-hotel" style="margin-right: 7px;"></i>
+                                    {{room}}</span>
+                                    
+                                    <span class="text-info">{{room.description}}</span>
+                            </li>
+                            {% endfor %}
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <form method="post" style="background: rgb(30,40,51);">
+                        {% csrf_token %}
+
+                        <h2 class="text-center" style="color: rgb(255,255,255);">Book a room</h2>
+                        <span style="color: rgb(255,255,255);font-weight: bold;">Branch</span>
+                        <div class="mb-3">{{form.hotel_code}}
+                        </div>
+                        <span style="color: rgb(255,255,255);font-weight: bold;">Room</span>
+                        <div class="mb-3">
+                            {{form.room_ID}}
+                        </div>
+                        <span style="color: rgb(255,255,255);font-weight: bold;">Check in Date</span>
+                        <div class="mb-3"><input class="form-control" type="date" name="{{form.checkin_date.name}}" ></div>
+                        <span style="color: rgb(255,255,255);font-weight: bold;">Check out Date</span>
+                        <div class="mb-3"><input class="form-control" type="date" name="{{form.checkout_date.name}}"></div>
+                        <div class="mb-3"><input class="form-control" type="text" placeholder="number of guest" name="{{form.no_of_guests.name}}"></div>
+                        <div class="mb-3"><button class="btn btn-primary d-block w-100" type="submit" style="background: rgb(33,74,128);color: rgb(255,255,255);">Book now</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script src=" {% static 'assets/bootstrap/js/bootstrap.min.js' %} "></script>
+    <script src=" {% static 'assets/js/bs-init.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src=" {% static 'assets/js/grayscale.js' %} "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.4.8/swiper-bundle.min.js"></script>
+    <script src=" {% static 'assets/js/Simple-Slider.js' %} "></script>
+</body>
+
+{% endblock %}   

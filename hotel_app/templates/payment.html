@@ -1,0 +1,45 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<body>
+    <section class="register-photo" style="background: rgb(0,0,0);height: 1000px;background: #475d62 url(star-sky.jpg);background-size: cover;position: relative;">
+        <div class="form-container" style="width: 445.006px;">
+            <form method="post" style="background: rgb(30,40,51);">
+                {% csrf_token %}
+                <div class="text-center"><i class="fa fa-id-card" style="color: rgb(255,255,255);font-size: 49px;margin-bottom: 11px;"></i></div>
+                <div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-6"><small style="color: rgb(255,255,255);"><strong><span style="text-decoration: underline;">Order Summary</span></strong></small></div>
+                            <div class="col-md-6"><small style="color: rgb(255,255,255);"></small></div>
+                            <div class="col"><small style="color: rgb(255,255,255);">Reservation Fee</small></div>
+                            <div class="col"><small style="color: rgb(255,255,255);">PHP 99.00</small></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center mb-3"><a class="btn btn-primary text-start" role="button" style="background: rgb(33,74,128);color: rgb(255,255,255);margin-right: 5px;margin-left: 5px;"><i class="fa fa-paypal"></i>PayPal</a><a class="btn btn-primary text-start" role="button" style="background: rgb(33,74,128);color: rgb(255,255,255);margin-right: 5px;margin-left: 5px;"><i class="fa fa-globe"></i>Gcash</a><a class="btn btn-primary text-start" role="button" style="background: rgb(33,74,128);color: rgb(255,255,255);margin-right: 5px;margin-left: 5px;"><i class="fab fa-earlybirds"></i>Paymaya</a></div>
+                <div class="text-center mb-3"><span class="text-center" style="color: rgb(255,255,255);">------<i class="fa fa-circle" style="font-size: 22px;"></i>------</span></div>
+                <h2 class="text-center" style="color: rgb(255,255,255);">Credit Card payment</h2>
+                <div class="mb-3"><input class="form-control" name="card_owner" type="text" placeholder="Card Holder&#39;s name" /></div>
+                <div class="mb-3"><input class="form-control" name="card_number" type="number"  placeholder="Card Number" /></div>
+                <div class="mb-3"><input class="form-control" name="card_cvv" type="number"  placeholder="CVC"  /></div>
+                <div class="mb-3">
+                    <p style="color: rgb(255,255,255);margin-bottom: 10px;">Card Exp. Date</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col"><input class="form-control" name="exp_month" type="number" placeholder="MM" /></div>
+                            <div class="col-md-6"><input class="form-control" name="exp_year" type="number" placeholder="YYYY" /></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="mb-3"> <input type="submit" value="Submit"></div>
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+
+{% endblock %}

@@ -1,0 +1,15 @@
+{% load static %}
+
+
+<nav id="mainNav" class="navbar navbar-dark navbar-expand-sm ">
+    <div class="container-fluid"><a class="navbar-brand" href="{% url 'home' %}"><i class="fas fa-hotel" style="margin: 13px;"></i>BetterSogo</a><button class="navbar-toggler navbar-toggler-right" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" type="button" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" value="Menu"><i class="fa fa-bars"></i></button>
+        <div id="navbarResponsive" class="collapse navbar-collapse">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item nav-link"><a class="nav-link disabled" href><i class="fa fa-user" style="margin-right: 8px;"></i>Hello {{ user.first_name }}</a></li>
+                <li class="nav-item nav-link"><a class="nav-link" href="{% url 'contact' %}"><i class="fa fa-address-book" style="margin-right: 8px;"></i>contact</a></li>
+                <li class="nav-item nav-link"><a class="nav-link" href="{% url 'bookinglist' %}"><i class="far fa-list-alt" style="margin-right: 8px;"></i>Your Reservation</a></li>
+                <li class="nav-item nav-link"><a class="nav-link" href="{% url 'logout' %}"><i class="fa fa-user-circle" style="margin-right: 8px;"></i>LOGOUT</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
